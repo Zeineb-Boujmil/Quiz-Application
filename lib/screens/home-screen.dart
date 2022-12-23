@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project/models/question-model.dart';
+import '../models/question-model.dart';
 import '../constants.dart';
 import '../widgets/question-widget.dart';
 import '../widgets/next-button.dart';
@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Question(
         id: '12',
         title: 'what is 2*2',
-        options: {'5': false, '20': false, '4': true}),
+        options: {'5': false, '20': true, '4': false}),
   ];
   int index = 0;
   bool isPressed = false;
