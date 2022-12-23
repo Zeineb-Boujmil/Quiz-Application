@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quiz1/models/question-model.dart';
-import 'package:quiz1/widgets/option-card.dart';
-import 'package:quiz1/widgets/question-widget.dart';
+import 'package:project/models/question-model.dart';
 import '../constants.dart';
-import '../models/question-model.dart';
 import '../widgets/question-widget.dart';
 import '../widgets/next-button.dart';
 import '../widgets/option-card.dart';

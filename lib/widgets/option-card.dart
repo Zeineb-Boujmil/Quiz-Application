@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz1/constants.dart';
+import '../constants.dart';
 
 class OptionCard extends StatelessWidget {
   const OptionCard({Key? key, required this.option, required this.color, required this.onTap})
