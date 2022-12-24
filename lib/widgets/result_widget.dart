@@ -4,10 +4,12 @@ import '../constants.dart';
 class ResultBox extends StatelessWidget {
   const ResultBox({Key? key, 
   required this.result, 
-  required this.QuestionLenght}) : super(key: key);
+  required this.QuestionLenght,
+  required this.onPressed}) : super(key: key);
   
   final int result;
   final int QuestionLenght;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -43,9 +45,7 @@ class ResultBox extends StatelessWidget {
               ),
               const SizedBox(height: 25.0,),
               GestureDetector(
-                onTap: () {
-                
-                },
+                onTap: onPressed,
                 child: const Text('Start over',
                 style: TextStyle(
                   color: Colors.blue,

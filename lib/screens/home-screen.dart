@@ -28,14 +28,16 @@ class _HomeScreenState extends State<HomeScreen> {
   int score = 0;
   bool isPressed = false;
   bool isAlreadySelected = false;
+
   void nextQuestion() {
     if (index == _questions.length - 1) {
        showDialog(context: context,
        barrierDismissible: false, 
        builder: (ctx) => ResultBox(
         result: score, 
-        QuestionLenght: _questions.length)
-        );
+        QuestionLenght: _questions.length,
+        onPressed : startOver,
+        ));
     } else {
       if (isPressed) {
         setState(() {
@@ -60,12 +62,23 @@ class _HomeScreenState extends State<HomeScreen> {
       if (value)
         {  
           score ++;
+        }
+
           setState(() {
             isPressed = true;
             isAlreadySelected = true;
           });
         }
     }
+
+  void startOver(){
+    setState(() {
+      index = 0;
+      score = 0;
+      isPressed = false;
+      isAlreadySelected = false;
+    });
+    Navigator.pop(context);
   }
 
   @override
