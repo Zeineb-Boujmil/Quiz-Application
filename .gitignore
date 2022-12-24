@@ -28,6 +28,8 @@
 .packages
 .pub-cache/
 .pub/
+./.dart_tool
+./.idea
 
 # Web related
 lib/generated_plugin_registrant.dart
