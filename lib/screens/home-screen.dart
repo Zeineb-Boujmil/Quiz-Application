@@ -4,6 +4,7 @@ import '../constants.dart';
 import '../widgets/question-widget.dart';
 import '../widgets/next-button.dart';
 import '../widgets/option-card.dart';
+import '../widgets/result_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -29,7 +30,12 @@ class _HomeScreenState extends State<HomeScreen> {
   bool isAlreadySelected = false;
   void nextQuestion() {
     if (index == _questions.length - 1) {
-      return;
+       showDialog(context: context,
+       barrierDismissible: false, 
+       builder: (ctx) => ResultBox(
+        result: score, 
+        QuestionLenght: _questions.length)
+        );
     } else {
       if (isPressed) {
         setState(() {
