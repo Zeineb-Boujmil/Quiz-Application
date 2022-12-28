@@ -16,14 +16,20 @@ class Questionwidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      alignment: Alignment.centerLeft,
-      child: Text(
-        'Question ${indexAction + 1}/$totalQuestions: $question',
+      alignment: Alignment.topCenter,
+      child: Column(children: [
+        const Image(
+          image: AssetImage('../assets/thinking.png'),
+          height: 100.0,
+          ),
+        Text(
+        'Question ${indexAction + 1}/$totalQuestions:\n $question',
         style: const TextStyle(
           fontSize: 24.0,
           color: neutral,
         ),
       ),
-    );
+      ] 
+    ));
   }
 }

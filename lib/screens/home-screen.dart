@@ -16,14 +16,68 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   List<Question> _questions = [
     Question(
-        id: '11',
-        title: 'what is 2+2',
-        options: {'5': false, '20': false, '4': true}),
+        id: '1',
+        title: 'What sentence uses the present perfect tense correctly?',
+        options: {'I have visited the Colosseum last year.': false,
+        "He's spoken to me ten minutes ago.": false, 
+        'She has lived in Barcelona all her life.': true}),
     Question(
-        id: '12',
-        title: 'what is 2*2',
-        options: {'5': false, '20': true, '4': false}),
+        id: '2',
+        title: 'In which sentence is "Gradually" used in the most appropriate position?',
+        options: {'Gradually, I accepted her as one of the family': true, 
+        'I accepted gradually her as one of the family': false,
+        }),
+        Question(
+        id: '3',
+        title: 'Which third conditional sentence is correct?',
+        options: {'If I would have seen you, I have had said hello.': false,
+        "If I had seen you, I would have said hello.": true, 
+        'I have had said hello If I would have seen you.': false}),
+        Question(
+        id: '4',
+        title: "He doesn't like the boss.\n ________ I.",
+        options: {'Neither do': true,
+        "Neither does": false, 
+        "Neither don't": false}),
+        Question(
+        id: '5',
+        title: "Which short answer is NOT correct?\n 'Do you think we will make it in time?'\n'_______'",
+        options: {"I don't suppose not.": true,
+        "I don't suppose so.": false, 
+        "I suppose not": false}),
+        Question(
+        id: '6',
+        title: "I will lend you the book ________ you return it",
+        options: {"in case": false,
+        "so far so": false, 
+        "so long so": true}),
+        Question(
+        id: '7',
+        title: "Levi was eagerly ________ her arrival.",
+        options: {"supposing": false,
+        "anticipating": true, 
+        "pretending": false}),
+        Question(
+        id: '8',
+        title: "Which sentence is correct?",
+        options: {"Students are not allowed to eat in class.": true,
+        "Students are not let to eat in class.": false, 
+        "Both are correct.": false}),
+        Question(
+        id: '9',
+        title: "Luckily, the rescue came __________.",
+        options: {"in the nick of minute": false,
+        "in the nick of date": false, 
+        "in the nick of time": true}),
+        Question(
+        id: '10',
+        title: 'Which sentence correctly reports this question?\n"what are you doing?"',
+        options: {"He asked me what I am doing": false,
+        "He asked me what I was doing": true, 
+        "He asked me what am I doing": false}),
   ];
+
+
   int index = 0;
   int score = 0;
   bool isPressed = false;
